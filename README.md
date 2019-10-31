@@ -1,9 +1,9 @@
 # SCCMOneNoteInventory
 Inventory Users Recent OneNote Notebooks via SCCM Inventory  
 
-1.Create the Mof(I used RegKey2MOF)
-2.Import the Mof to Hardware inventory classes into client settings
-3.Run the PS1 script on the systems you want to inventory
+1.Create the Mof(I used RegKey2MOF)  
+2.Import the Mof to Hardware inventory classes into client settings  
+3.Run the PS1 script on the systems you want to inventory  
 
 ## Note:
 There are Functions used from PSApplicationDeployment Toolkit used here.   
