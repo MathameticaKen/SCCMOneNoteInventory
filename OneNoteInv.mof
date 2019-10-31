@@ -1,0 +1,16 @@
+//==================================<
+//****Start OneNote****
+//==================================<
+#pragma namespace ("\\\\.\\root\\cimv2")
+#pragma deleteclass("OneNoteBooks", NOFAIL)
+[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Company\\OneNoteBooks")]
+Class OneNoteBooks
+{
+[key] string KeyName;
+[PropertyContext("User")] String User;
+[PropertyContext("Name")] String Name;
+[PropertyContext("Location")] String Location;
+};
+//==================================<
+//****End OneNote****
+//==================================<
