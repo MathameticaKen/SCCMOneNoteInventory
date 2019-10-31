@@ -44,11 +44,12 @@ $OneNoteOutput  | Out-String -Width 2000 | Out-File $OneNotePreMoveExportFile
     $Item.'Notebook Location' = $FixedOneNotePath
     $item
     }
-}#>
+}
 
 # Post-Move Notebook locations for The template File
 $OneNoteOutput = $Notebookpaths | ft 
 $OneNoteOutput  | Out-String -Width 2000 | Out-File $OneNotePostMoveExportFile
+#>
 
 #Stop OneNote Process to kill Com Objects
 [System.Runtime.Interopservices.Marshal]::ReleaseComObject($OneNote)
