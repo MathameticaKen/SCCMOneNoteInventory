@@ -35,7 +35,8 @@ $OneNoteOutput = $Notebookpaths | ft
 $OneNoteOutput  | Out-String -Width 2000 | Out-File $OneNotePreMoveExportFile
 
 #Modify Array items for Notebook Post-Move Locations
-foreach($Item in $NotebookPaths){
+#This portion is used to Modify where the local OneNote files will end up after the OneDrive Deployment Moves them(Uncomment if needed)
+<#foreach($Item in $NotebookPaths){
     if(($Item.'Notebook Location') -like "*C:\users\$env:USERNAME\*"){ 
     $ItemPath = $Item.'Notebook Location'
     $split = Split-Path -Path $itempath -Parent
@@ -43,7 +44,7 @@ foreach($Item in $NotebookPaths){
     $Item.'Notebook Location' = $FixedOneNotePath
     $item
     }
-}
+}#>
 
 # Post-Move Notebook locations for The template File
 $OneNoteOutput = $Notebookpaths | ft 
